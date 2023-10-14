@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>App</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <link href="main.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+
+  <!-- page starts here -->
+  <!-- nav -->
+  <nav class="nav-sm">
+    <span class="material-icons"> backup_table </span>
+    <span class="material-icons"> backup_table </span>
+    <span class="material-icons"> backup_table </span>
+    <span class="material-icons"> close </span>
+  </nav>
+  <nav class="nav-md">
+    <span class="material-icons"> backup_table </span>
+    <span class="material-icons"> backup_table </span>
+    <span class="material-icons"> backup_table </span>
+    <span class="material-icons"> close </span>
+  </nav>
+  <nav class="nav-lg">
+    <span class="material-icons"> backup_table </span>
+    <span class="material-icons"> backup_table </span>
+    <span class="material-icons"> backup_table </span>
+    <span class="material-icons"> close </span>
+  </nav>
+  <!-- nav -->
+
+  <!-- sections -->
+  <div id="sections card">
+    <!-- add item -->
+    <div class="card additems shadow">
+      <div class="card-header d-flex justify-content-center">
+        Add item [Alpha v0.14.10.23.1]
+      </div>
+      <div class="card-body d-flex justify-content-center flex-column">
+        <div>
+          <p class="card-text">
+          <table id="additemstable" class="table table-striped-columns d-flex justify-content-center">
+            <tbody>
+              <tr>
+                <td scope="row"><input type="number" class="form-control form-control-sm" id="inputMonto"
+                    placeholder="AR$"></td>
+              </tr>
+              <tr>
+                <th scope="row">
+                  <input id="inputTipo" list="listaTipos" placeholder="Ingreso - Gasto">
+                  <datalist id="listaTipos">
+                    <option value="Gasto" />
+                    <option value="Ingreso" />
+                  </datalist>
+                </th>
+              </tr>
+              <tr>
+                <th scope="row">
+                  <input id="inputDetalle" placeholder="Detalle">
+                </th>
+              </tr>
+              <tr>
+                <th scope="row">
+                  <input id="inputCash" placeholder="Efectivo - Electronico">
+                </th>
+              </tr>
+            </tbody>
+          </table>
+          </p>
+        </div>
+        <hr>
+        <a href="javascript:void(0)" class="btn btn-dark" onclick='addItemStart(), statsDisplay()'>Guardar</a>
+      </div>
+    </div>
+    <!-- add item -->
+
+    <!-- stats -->
+    <div class="card additems shadow">
+      <div class="card-header d-flex justify-content-center">
+        Info
+      </div>
+      <div class="card-body d-flex justify-content-center flex-column">
+        <div>
+          <p class="card-text">
+            <span class="card-header d-flex justify-content-center">Stats</span>
+          <div class="d-flex justify-content-center">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th scope="col"># Total</th>
+                  <th scope="col">First</th>
+                  <th scope="col">Last</th>
+                  <th scope="col">Handle</th>
+                </tr>
+              </thead>
+              <tbody tbody id="statsTable">
+              </tbody>
+            </table>
+          </div>
+          <hr>
+          <table class="table table-striped">
+            <p class="card-header d-flex justify-content-center">Log</p>
+            <thead>
+              <th>#</th>
+              <th>Monto</th>
+              <th>Flujo</th>
+              <th>Detalle</th>
+              <th>Forma</th>
+            </thead>
+            <tbody id="logTable">
+            </tbody>
+          </table>
+          </p>
+        </div>
+
+        <!-- <a href="javascript:void(0)" class="btn btn-dark" onclick='verDetalles()'>detalles</a> -->
+      </div>
+    </div>
+    <!-- add item -->
+
+    <!-- stats 
+            <div class="card additems shadow">
+              <div class="card-header d-flex justify-content-center">
+                Stats
+              </div>
+              <div class="card-body d-flex justify-content-center flex-column">
+                <div>
+                <p class="card-text">
+                  <table class="table">
+                    <p class="card-header d-flex justify-content-center">History</p>
+                    <thead>               
+                      <th>#</th>
+                      <th>Monto</th>
+                      <th>Flujo</th>
+                      <th>Detalle</th>
+                      <th>Forma</th>
+                    </tr>
+                    </thead>
+                    <tbody id="logTable">
+                    </tbody>
+                  </table>
+                </p>
+                </div>
+                <hr>
+                <a href="javascript:void(0)" class="btn btn-dark" onclick='verDetalles()'>detalles</a>
+              </div>
+            </div>
+             add item -->
+
+  </div>
+  <!-- sections -->
+  <!-- page ends here -->
+  <p id="elemSubtlFecha">Loading...</p>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"></script>
+  <script src="main.js"></script>
+</body>
+
+</html>
