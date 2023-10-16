@@ -28,17 +28,12 @@ body {
   }
   @media (max-width: 300px) {
     /* … */
-    .sections {
-      display: flex;
-    }
+body {display: none;}
 
   }
   @media (min-width: 301px) {
     /* … */
-    .sections {
-      display: grid;
-      grid-column: 1 / 3;
-    }
+body {display: none;}
   }
   @media (min-width: 992px) {
     /* … */
