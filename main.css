@@ -33,7 +33,7 @@ body {display: none;}
   }
   @media (min-width: 301px) {
     /* … */
-body {display: none;}
+body {display: block;}
   }
   @media (min-width: 992px) {
     /* … */
