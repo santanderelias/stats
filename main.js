@@ -113,6 +113,7 @@ function statsDisplay() {
 }
 
 setTimeout(function(){
+    console.log('10s to reload')
     window.location.reload();
  }, 10000);
 //menus can wait
