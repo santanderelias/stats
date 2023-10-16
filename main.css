@@ -4,9 +4,10 @@ body {
     background-color: gray;
   }
 
-  .sections {
+  #sections {
     display: grid;
     grid-column: 1 / 3;
+    margin: 20px;
   }
   .nav-sm {
     /*display: none;*/
@@ -26,21 +27,6 @@ body {
   .nav-lg {
     display: none;
   }
-  @media (max-width: 300px) {
-    /* … */
-body {display: none;}
-
-  }
-  @media (min-width: 301px) {
-    /* … */
-body {display: block;}
-  }
-  @media (min-width: 992px) {
-    /* … */
-  }
-  .card {
-    margin: 20px;
-  }
   #elemSubtlFecha {
     font-size: xx-small;
     position: fixed;
@@ -49,3 +35,15 @@ body {display: block;}
     color: rgb(65, 230, 24);
     background-color: black;
   }
+
+  /* For mobile phones: */
+[class*="col-"] {
+  width: 100%;
+}
+
+@media only screen and (min-width: 768px) {
+  /* For desktop: */
+  #sections {
+    display: flex;
+  }
+}
