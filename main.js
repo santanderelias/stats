@@ -30,11 +30,11 @@ function onLoad() {
     elemSubtlFecha.innerText = 'Loaded: ' + new Date()
     //load events at start
     //in mobile we need to focus next input manually after picking an option
-    document.getElementById('inputTipo').addEventListener('change',function(){
+    document.getElementById('inputTipo').addEventListener('change', function () {
         if (inputTipo = 'Gasto') {
             document.getElementById('inputDetalle').focus()
         }
-        else if (inputTipo = 'Ingreso'){
+        else if (inputTipo = 'Ingreso') {
             document.getElementById('inputDetalle').focus()
         }
     });
@@ -56,7 +56,7 @@ function addItemStart() {
     let inputTipo = document.getElementById('inputTipo').value;
     let inputDetalle = document.getElementById('inputDetalle').value;
     let inputCash = document.getElementById('inputCash').value;
-    database.push({monto: inputMonto, tipo: inputTipo, detalle: inputDetalle, cash: inputCash});
+    database.push({ monto: inputMonto, tipo: inputTipo, detalle: inputDetalle, cash: inputCash });
     numberofitems += 1;
     var row = document.getElementById('logTable').insertRow(0);
     var celcinc = document.createElement("th");
@@ -65,8 +65,8 @@ function addItemStart() {
     var celtres = document.createElement("td");
     var celcuat = document.createElement("td");
     celcinc.innerHTML = numberofitems
-  /*  row.classList.add('table');
-    row.classList.add('table-dark'); */
+    /*  row.classList.add('table');
+      row.classList.add('table-dark'); */
     celuno.innerHTML = inputMonto
     celdos.innerHTML = inputTipo
     celtres.innerHTML = inputDetalle
@@ -89,9 +89,9 @@ function verDetalles() {
 var montoTotal = 0;
 function statsDisplay() {
     for (var i = 0; i < 3; i++) {
-        montoTotal = montoTotal + database[i]
+        montoTotal = montoTotal + database[i][i]
         console.log('monto total: ' + montoTotal)
-        }
+    }
     //update input vars, save, then clear and focus (may be)
     var row = document.getElementById('statsTable');
     row.innerHTML = '';
@@ -99,23 +99,23 @@ function statsDisplay() {
     var celdos = document.createElement("td");
     var celtres = document.createElement("td");
     var celcuatro = document.createElement("td");
-//    var celcinco = document.createElement("td");
-     celuno.innerHTML = numberofitems
+    //    var celcinco = document.createElement("td");
+    celuno.innerHTML = numberofitems
     celdos.innerHTML = 'totalGasto'
     // celtres.innerHTML = totalIngreso
     // celcuatro.innerHTML = Captl
     // celcinco.innerHTML = ? cierre ?
     row.appendChild(celuno)
-     row.appendChild(celdos)
+    row.appendChild(celdos)
     // row.appendChild(celtres)
     // row.appendChild(celcuatro)
- //   row.appendChild(celcinco)
+    //   row.appendChild(celcinco)
 }
 
 console.log('10s to reload');
-setTimeout(function(){
+setTimeout(function () {
     window.location.reload();
- }, 10000);
+}, 10000);
 //menus can wait
 //addevent to mobmenu so when you click to nav to where you are now it shows a notif saying "you're already here" and fade asap 
 
