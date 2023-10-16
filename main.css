@@ -32,7 +32,7 @@ body {
     position: fixed;
     top: 0;
     left: 10px;
-    color: rgb(65, 230, 24);
+    color: rgb(22, 111, 0);
     background-color: black;
   }
 
@@ -43,7 +43,18 @@ body {
 
 @media only screen and (min-width: 768px) {
   /* For desktop: */
+  #elemSubtlFecha {
+    font-size: xx-small;
+    position: fixed;
+    top: 0;
+    left: 10px;
+    color: rgb(79, 24, 230);
+    background-color: black;
+  }
   #sections {
     display: flex;
+  }
+  .card {
+    margin: 10px;
   }
 }
