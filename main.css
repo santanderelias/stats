@@ -28,7 +28,7 @@ body {
     }
 
   }
-  @media (min-width: 301) {
+  @media (min-width: 301px) {
     /* … */
     .sections {
       display: grid;
