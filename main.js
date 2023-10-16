@@ -112,7 +112,7 @@ function statsDisplay() {
     //   row.appendChild(celcinco)
 }
 
-// console.log('10s to reload');
+ console.log('v.1');
 // setTimeout(function () {
 //     window.location.reload();
 // }, 10000);
