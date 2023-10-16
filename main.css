@@ -21,8 +21,12 @@ body {
   .nav-lg {
     display: none;
   }
-  @media (max-width: 992px) {
+  @media (max-width: 500px) {
     /* … */
+    .sections {
+      display: flex;
+    }
+
   }
   @media (min-width: 992px) {
     /* … */
