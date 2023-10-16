@@ -112,8 +112,8 @@ function statsDisplay() {
  //   row.appendChild(celcinco)
 }
 
+console.log('10s to reload');
 setTimeout(function(){
-    console.log('10s to reload')
     window.location.reload();
  }, 10000);
 //menus can wait
