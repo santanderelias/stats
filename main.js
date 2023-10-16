@@ -112,10 +112,10 @@ function statsDisplay() {
     //   row.appendChild(celcinco)
 }
 
-console.log('10s to reload');
-setTimeout(function () {
-    window.location.reload();
-}, 10000);
+// console.log('10s to reload');
+// setTimeout(function () {
+//     window.location.reload();
+// }, 10000);
 //menus can wait
 //addevent to mobmenu so when you click to nav to where you are now it shows a notif saying "you're already here" and fade asap 
 
